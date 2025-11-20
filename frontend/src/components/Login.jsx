@@ -19,7 +19,7 @@ const Login = () => {
 const [showPassword, setShowPassword] = React.useState(false);
   const onSubmit = async (data) => {
     try {
-      const res = await axios.post("http://localhost:8000/api/users/login", data,{withCredentials:true});
+      const res = await axios.post("https://mern-shopin.onrender.com/api/users/login", data,{withCredentials:true});
       alert(res.data.message || "login successful!");
       // console.log(res.data);
       dispatch(login(res.data));

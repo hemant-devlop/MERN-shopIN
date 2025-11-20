@@ -32,6 +32,7 @@ app.use('/api/orders',order)
 app.get('/', (req, res) => {
   res.status(200).json({name:'ShopIn'});  
 });
+
 //server
 
 const PORT = process.env.PORT || 5000;

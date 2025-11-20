@@ -2,7 +2,9 @@ import { configureStore,combineReducers } from "@reduxjs/toolkit";
 import {FLUSH, PAUSE, PERSIST, persistReducer,persistStore, PURGE, REGISTER, REHYDRATE} from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import authSlice from "./authSlice.js";
-
+import productsSlice from "./productSlice.js";
+import cartSlice from './cartSlice.js'
+import productSlice from './singleProduct.js'
 //persist config
 const persistConfig=({
     key:'root',
@@ -13,6 +15,9 @@ const persistConfig=({
 //root reducer to combine slices
 const rootReducer=combineReducers({
     auth:authSlice,
+    products:productsSlice,
+    cart:cartSlice,
+    product:productSlice
     // other:otherSlice
 })
 

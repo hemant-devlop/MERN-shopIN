@@ -11,6 +11,7 @@ import Login from './components/Login'
 import ProtectedRoute from './router/protectedRoute'
 import EditProfile from './components/EditProfile'
 import CreateProduct from './components/CreateProduct'
+import Product from './components/Product'
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/products' element={<Products />} />
+          <Route path='/product/:id' element={<Product />} />
           <Route path='/cart' element={<ProtectedRoute><Cart /></ProtectedRoute>} />
           <Route path='/about' element={<About />} />
           <Route path='/profile' element={<ProtectedRoute><Profile /></ProtectedRoute>} />

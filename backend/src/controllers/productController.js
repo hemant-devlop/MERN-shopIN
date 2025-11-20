@@ -10,9 +10,14 @@ export const getProduct = async (req, res) => {
 
 //get product by id 
 export const getProductById = async (req, res) => {
-    const product = await Product.findById(req.param.id)
-    if (!product) return res.status(400).json({ message: 'product not found' });
-    res.status(200).json(product)
+    try {
+        const product = await Product.findById(req.params.id)
+        if (!product) return res.status(400).json({ message: 'product not found' });
+        // console.log(product)
+        res.status(200).json(product)
+    } catch (error) {
+        res.status.json({message:error.message})
+    }
 }
 
 //Admin::create product by admin
