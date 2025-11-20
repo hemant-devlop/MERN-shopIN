@@ -6,6 +6,6 @@ const router = express.Router();
 
 router.post("/", protect, placeOrder);
 router.get("/", protect, getUserOrders);
-router.put("/delete", deleteUserOrders);
+router.put("/delete", protect,deleteUserOrders);
 
 export default router;

@@ -13,7 +13,7 @@ const NavComponent = () => {
     const {cartProduct} = useSelector(state => state.cart);
     const cartProducts=cartProduct?.map(item=>item?.orderItems)
   const cartArr=cartProducts?.map(item=>item[0])
-  const total=cartArr.reduce((acc,val)=>acc+val.price,0)
+  const total=cartArr?.reduce((acc,val)=>acc+val.price,0)
     const dispatch = useDispatch();
     const navigate = useNavigate();
     // console.log(user)

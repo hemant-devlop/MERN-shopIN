@@ -33,7 +33,7 @@ export const loginUser = async (req, res) => {
         const isMatch = await user.comparePassword(password)
         if (!isMatch) return res.status(400).json({ message: 'user password invalid' });
         const token = await generateToken(user._id)
-        await res.cookie('token', token, { httpOnly: true, sameSite: 'strict', maxAge: 1 * 24 * 60 * 60 * 1000  });
+        await res.cookie('token', token, { httpOnly: true,secure:true, sameSite: 'strict', maxAge: 1 * 24 * 60 * 60 * 1000  });
         res.json({
             _id: user._id,
             name: user.name,
