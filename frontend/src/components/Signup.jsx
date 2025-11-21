@@ -15,7 +15,7 @@ const Signup = () => {
   const [showPassword, setShowPassword] = React.useState(false);
   const onSubmit = async (data) => {
     try {
-      const res = await axios.post("https://mern-shopin.onrender.com /api/users/register", data);
+      const res = await axios.post("https://mern-shopin.onrender.com/api/users/register", data);
       alert(res.data.message || "Signup successful!");
       reset();
       navigate("/login");

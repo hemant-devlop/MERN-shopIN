@@ -23,7 +23,7 @@ const NavComponent = () => {
     }
     const handleLogout = () => {
         // Clear user session or token here
-        axios.post("https://mern-shopin.onrender.com /api/users/logout", {}, { withCredentials: true }).then(() => {
+        axios.post("https://mern-shopin.onrender.com/api/users/logout", {}, { withCredentials: true }).then(() => {
             // Clear user session or token here
             localStorage.removeItem("token");
             dispatch(logout());

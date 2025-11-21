@@ -12,7 +12,7 @@ const Products = () => {
   const navigate = useNavigate()
   const[crtProduct,setcartProduct]=useState();
   const dispatch=useDispatch()
-  const { productData: products, isLoading, error } = useFetch("https://mern-shopin.onrender.com /api/products");
+  const { productData: products, isLoading, error } = useFetch("https://mern-shopin.onrender.com/api/products");
     // console.log(products)
   //product add to cart
   const handleAddToCart = (product) => {
