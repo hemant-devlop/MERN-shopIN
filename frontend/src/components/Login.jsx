@@ -1,10 +1,10 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
-import { EyeIcon, EyeOffIcon } from "lucide-react";
+import { EyeIcon, EyeOffIcon, Link } from "lucide-react";
 import { useDispatch } from "react-redux";
 import { login } from "../redux/authSlice";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -19,7 +19,7 @@ const Login = () => {
 const [showPassword, setShowPassword] = React.useState(false);
   const onSubmit = async (data) => {
     try {
-      const res = await axios.post("https://mern-shopin.onrender.com/api/users/login", data,{withCredentials:true});
+      const res = await axios.post("https://mern-shopin.onrender.com /api/users/login", data,{withCredentials:true});
       alert(res.data.message || "login successful!");
       // console.log(res.data);
       dispatch(login(res.data));
@@ -103,9 +103,9 @@ const [showPassword, setShowPassword] = React.useState(false);
 
           <p className="text-center mt-4 text-sm">
             I don't have an account?{" "}
-            <a href="/signup" className="text-blue-500 hover:underline">
-              Signup
-            </a>
+            <NavLink to="/signup" className="text-blue-500 hover:underline">
+              signup
+            </NavLink>
           </p>
         </div>
       </div>

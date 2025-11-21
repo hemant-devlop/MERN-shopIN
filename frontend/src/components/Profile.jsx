@@ -8,7 +8,7 @@ const Profile = () => {
   const {user}=useSelector(state=>state.auth);
  const navigate=useNavigate();
   // useEffect(() => {
-  //   axios.get("https://mern-shopin.onrender.com/api/users/profile", {
+  //   axios.get("https://mern-shopin.onrender.com /api/users/profile", {
   //     withCredentials: true,
   //   }).then(response => {
   //     console.log("User profile data:", response.data);

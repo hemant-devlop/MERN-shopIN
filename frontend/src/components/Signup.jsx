@@ -2,7 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { EyeIcon, EyeOffIcon } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 const Signup = () => {
   const navigate = useNavigate();
   const {
@@ -15,7 +15,7 @@ const Signup = () => {
   const [showPassword, setShowPassword] = React.useState(false);
   const onSubmit = async (data) => {
     try {
-      const res = await axios.post("https://mern-shopin.onrender.com/api/users/register", data);
+      const res = await axios.post("https://mern-shopin.onrender.com /api/users/register", data);
       alert(res.data.message || "Signup successful!");
       reset();
       navigate("/login");
@@ -132,10 +132,10 @@ const Signup = () => {
           </form>
 
           <p className="text-center mt-4 text-sm">
-            Already have an account?{" "}
-            <a href="/login" className="text-blue-500 hover:underline">
+            Already have an account?
+            <NavLink to="/login" className="text-blue-500 hover:underline">
               Login
-            </a>
+            </NavLink>
           </p>
         </div>
       </div>

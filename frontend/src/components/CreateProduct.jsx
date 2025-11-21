@@ -30,7 +30,7 @@ const CreateProduct = () => {
             formData.append("brand", data.brand);
             formData.append("category", data.category);
 
-            const res = await axios.post("https://mern-shopin.onrender.com/api/products", formData, { withCredentials: true });
+            const res = await axios.post("https://mern-shopin.onrender.com /api/products", formData, { withCredentials: true });
             // dispatch(login(res.data.user));
             console.log(res.data)
             alert(res.data.message || "Product created successfully!");

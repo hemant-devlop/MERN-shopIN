@@ -36,7 +36,7 @@ const EditProfile = () => {
             formData.append("address", data.address);
             formData.append("email", data.email);
 
-            const res = await axios.post("https://mern-shopin.onrender.com/api/users/profile/edit", formData,{withCredentials:true});
+            const res = await axios.post("https://mern-shopin.onrender.com /api/users/profile/edit", formData,{withCredentials:true});
             dispatch(login(res.data.user));
             alert(res.data.message || "Profile updated successfully!");
             navigate("/profile");

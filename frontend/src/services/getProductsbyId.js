@@ -1,7 +1,7 @@
 import axios from "axios";
 export async function getProductById(id){
     try {
-        const res=await axios.get(`https://mern-shopin.onrender.com/api/products/${id}`,{withCredentials:true})
+        const res=await axios.get(`https://mern-shopin.onrender.com /api/products/${id}`,{withCredentials:true})
         const data=res.data
         return data
     } catch (error) {
@@ -12,7 +12,7 @@ export async function getProductById(id){
 
 export async function userOrders() {
     try {
-        const res=await axios.get("https://mern-shopin.onrender.com/api/orders",{withCredentials:true})
+        const res=await axios.get("https://mern-shopin.onrender.com /api/orders",{withCredentials:true})
         const data=res.data
         return data
         console.log(data)
