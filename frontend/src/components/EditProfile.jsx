@@ -60,7 +60,7 @@ const EditProfile = () => {
                                     {imagefile && imagefile[0] ? (
                                         <img
                                             src={URL.createObjectURL(imagefile[0])}
-                                            alt="Selected"
+                                            alt="Selected" 
                                         />
                                     ) : (
                                         <img src={user?.avatar?.url || "https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"} />
